@@ -1,0 +1,625 @@
+:root {
+  --white-color: #ffffff;
+  --Azul: #3a465c;
+  --BegeEscuro: #bb9684;
+  --BegeClaro: #d2beb0;
+  --Black: #262626;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cabin", sans-serif;
+}
+
+.Seed {
+  min-height: 100vh;
+  background-color: var(--white-color);
+  color: var(--Black);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+svg {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  background-color: transparent;
+}
+
+.simpleAnimation {
+  transition: all 0.5s;
+}
+
+.home {
+  max-height: 900px;
+  width: 100%;
+}
+
+.header {
+  padding: 20px 0px 20px 0px;
+  width: 100%;
+  max-height: 500px;
+  background-color: transparent;
+  color: var(--white-color);
+  position: absolute;
+  z-index: 2;
+}
+
+.imgTextHome {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  text-align: center;
+
+  background-image: url(assets/Capa.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.imgHome {
+  width: 100%;
+  max-height: 100%;
+}
+
+.HomeBox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #0000004d;
+  color: var(--white-color);
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.HomeP {
+  background-color: transparent;
+  max-width: 80%;
+  margin-top: 2em;
+  font-size: 3.5em;
+}
+
+.HomeT {
+  font-size: 1em;
+  max-width: 80%;
+  margin-top: 1em;
+}
+
+.LogIcon {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 15px;
+}
+
+.Logo {
+  max-width: 2.5em;
+  cursor: pointer;
+}
+
+.IconFicxer {
+  width: 25%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.linkB {
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: 600;
+  margin: 0 10px;
+  transition: 0.2s;
+  position: relative;
+}
+
+.linkB:hover {
+  color: var(--Black);
+}
+
+.linkB::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--Azul);
+  transition: all 0.5s;
+}
+
+.linkB:hover::before {
+  width: 100%;
+}
+
+.Icon {
+  display: none;
+  transition: 0.2s;
+}
+.Projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 2em 0px;
+}
+
+.SerBox {
+  margin: 2em;
+}
+
+.Servih2 {
+  color: var(--Azul);
+  font-size: 2em;
+}
+
+.SerGridList {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  gap: 10px;
+
+  transition: all 0.5s;
+}
+
+.GridElement {
+  list-style: none;
+  padding: 50px 20px;
+  text-align: center;
+  border: 1px solid var(--BegeEscuro);
+  color: var(--Azul);
+}
+
+.GridElement:hover {
+  background-color: var(--BegeEscuro);
+}
+
+.contato {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--Azul);
+}
+
+.sobre {
+  width: 100%;
+  height: 35em;
+  margin: 9% 0 0% 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  box-shadow: 0px -5vh 20px 40px #ffffff;
+  align-items: center;
+}
+
+.ImgPSobre {
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SobreImg {
+  background-image: url(assets/Sobre.jpg);
+  width: 100%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.SobreH3 {
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--BegeEscuro);
+  margin-bottom: 1em;
+}
+
+.PSobre {
+  width: var(100% - 30px);
+  padding: 30px;
+  background-color: var(--BegeClaro);
+}
+
+.PSobre > p {
+  color: var(--Black);
+  font-size: 1.1em;
+}
+
+.Paralax {
+  background-image: url(assets/Contato.jpg);
+  width: 100%;
+  height: 10em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ParaSpan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.27);
+}
+
+.ParaSpan > p {
+  color: var(--white-color);
+  font-size: 1.2em;
+}
+
+.FooterSec {
+  display: flex;
+  flex-direction: column;
+}
+
+.ContaF {
+  width: 100%;
+  color: #00a8e8;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.DivBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 2em;
+  width: 100%;
+}
+
+.H2Foot {
+  margin-bottom: 1em;
+  color: var(--BegeClaro);
+  font-size: 1.5em;
+}
+
+.listCont1 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.1em;
+}
+
+.listCont1 > li > span {
+  font-weight: 600;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.listCont1 > li > span:hover {
+  color: var(--white-color);
+}
+
+.listCont1 > li > a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.listCont2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listCont2 > li {
+  margin: 1em;
+  cursor: pointer;
+}
+
+.EndFot {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.IconFace {
+  transition: 0.5s;
+  color: #3b5998;
+}
+
+.IconFace:hover {
+  transform: scale(2, 2);
+  transform-origin: center;
+  position: sticky;
+  z-index: 10;
+}
+
+.IconInst {
+  transition: 0.5s;
+  color: #dd2a7b;
+}
+
+.IconInst:hover {
+  transform: scale(2, 2);
+  transform-origin: center;
+  position: sticky;
+  z-index: 10;
+}
+
+.IconLink {
+  transition: 0.5s;
+  color: #0e76a8;
+}
+
+.IconLink:hover {
+  transform: scale(2, 2);
+  transform-origin: center;
+  position: sticky;
+  z-index: 10;
+}
+
+.divBoxFooter {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.FicFoot {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  background-color: var(--white-color);
+  align-items: center;
+  justify-content: center;
+
+  font-style: italic;
+}
+
+@media screen and (max-width: 860px) {
+  .list {
+    animation: CloseBar 0.5s;
+    top: -100vh;
+  }
+
+  .listTop0 {
+    animation: ShowBar 0.5s both;
+    top: 0px;
+  }
+
+  .listActive {
+    z-index: 611;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--BegeEscuro);
+    margin: 0px -15px;
+  }
+  .linkB {
+    text-decoration: none;
+    color: var(--Black);
+    background-color: transparent;
+    transition: 0.2s;
+
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .linkB:hover {
+    color: var(--white-color);
+  }
+  .Icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    opacity: 2;
+    z-index: 611;
+    background-color: transparent;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 90%;
+  }
+
+  .Icon:hover {
+    color: var(--BegeEscuro);
+  }
+
+  .LogIcon {
+    display: flex;
+    align-items: center;
+  }
+
+  .closeIcon {
+    position: fixed;
+    background-color: transparent;
+  }
+
+  .closeIcon > path {
+    background-color: transparent;
+    color: var(--Black);
+    transition: 0.2s;
+  }
+
+  .closeIcon > path:hover {
+    color: red;
+  }
+
+  .FooterSec {
+    width: 60%;
+  }
+
+  .listCont2 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @keyframes ShowBar {
+    0% {
+      top: -100vh;
+      opacity: 0;
+    }
+    100% {
+      top: 0px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes CloseBar {
+    0% {
+      top: 0px;
+      opacity: 1;
+    }
+    100% {
+      top: -100vh;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 861px) {
+  .linkB {
+    font-size: 1.2em;
+  }
+
+  .imgTextHome {
+    height: 80vh;
+  }
+
+  .sobre {
+    margin: 5% 0 5% 0;
+    height: 40em;
+    box-shadow: 0px -8vh 20px 40px #ffffff;
+  }
+
+  .Projetos {
+    width: 50%;
+  }
+
+  .FooterSec {
+    width: 40%;
+  }
+
+  .SerGridList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .GridElement {
+    height: 40%;
+    padding: 50px 60px;
+  }
+
+  .listCont1 > li > span {
+    font-size: 1.2em;
+  }
+
+  .HomeBox {
+    justify-content: center;
+  }
+
+  .HomeP {
+    font-size: 4em;
+    max-width: 60%;
+    margin-top: -4em;
+  }
+
+  .HomeT {
+    max-width: 60%;
+    font-size: 1.2em;
+  }
+
+  .Paralax {
+    height: 15em;
+    background-attachment: fixed;
+  }
+  .Logo {
+    max-width: 4em;
+  }
+  .ImgPSobre {
+    flex-direction: row;
+    align-items: normal;
+  }
+  .SobreImg {
+    background-attachment: unset;
+    height: 100%;
+    width: 55%;
+  }
+  .PSobre {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    justify-content: center;
+  }
+
+  .DivBox {
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+  }
+  .divBoxFooter {
+    margin: 2%;
+  }
+  .listCont1 {
+    align-items: flex-start;
+  }
+  .listCont2 {
+    flex-direction: row;
+  }
+
+  .SobreH3 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 1599px) {
+  .HomeP {
+    max-width: 40%;
+  }
+
+  .FooterSec {
+    max-width: 30%;
+  }
+
+  .sobre {
+    box-shadow: 0px -11vh 20px 40px #ffffff;
+  }
+
+  .SerGridList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .Projetos {
+    width: 60%;
+  }
+  .ImgPSobre {
+    width: 60%;
+  }
+  .GridElement {
+    height: 40%;
+    width: 50%;
+    padding: 25% 25%;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .HomeP{
+    margin-top: 0;
+  }
+  
+}
